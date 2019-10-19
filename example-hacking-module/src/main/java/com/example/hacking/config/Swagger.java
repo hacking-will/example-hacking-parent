@@ -30,7 +30,7 @@ public class Swagger {
                 .apiInfo(apiInfo())
                 .select()
                 //此包路径下的类，才生成接口文档
-                .apis(RequestHandlerSelectors.basePackage("com.example.hacking.demo"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.hacking.modules"))
                 .paths(PathSelectors.any())
                 .build();
     }

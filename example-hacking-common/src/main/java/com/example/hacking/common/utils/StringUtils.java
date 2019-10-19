@@ -18,7 +18,7 @@ public class StringUtils {
     private static final String phoneRegx = "^(13[0-9]|15[01]|153|15[6-9]|180|18[23]|18[5-9])\\d{8}$";
 
     /**
-     * 判断一个字符串是否不为null且不为空
+     * 判断一个字符串不为null且不为空
      *
      * @param  str
      * @return boolean
@@ -26,9 +26,18 @@ public class StringUtils {
     public static boolean isNotEy(String str){
         return null != str && !"".equals(str);
     }
+    /**
+     * 判断一个字符串不为null, 且不为空, 且不全为空格
+     *
+     * @param  str
+     * @return boolean
+     */
+    public static boolean isNotEyAndSp(String str){
+        return null != str && !"".equals(str) && !"".equals(str.replace(" ", ""));
+    }
 
     /**
-     * 使用UUID生成字符串ID
+     * 使用UUID生成唯一性字符串，去除‘-’
      *
      * @return String
      */

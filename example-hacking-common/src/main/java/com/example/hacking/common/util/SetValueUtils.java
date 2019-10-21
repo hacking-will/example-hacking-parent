@@ -1,4 +1,4 @@
-package com.example.hacking.common.utils;
+package com.example.hacking.common.util;
 
 import com.example.hacking.common.annotation.SetValue;
 import lombok.Data;

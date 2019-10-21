@@ -1,4 +1,4 @@
-package com.example.hacking.common.utils;
+package com.example.hacking.common.util;
 
 import java.util.UUID;
 

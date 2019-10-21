@@ -1,8 +1,8 @@
 package com.example.hacking.modules.demo.controller;
 
 import com.example.hacking.common.annotation.SetValue;
-import com.example.hacking.common.utils.StringUtils;
-import com.example.hacking.common.utils.DateUtils;
+import com.example.hacking.common.util.StringUtils;
+import com.example.hacking.common.util.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -61,10 +61,10 @@ public class connectTestController {
         if(!StringUtils.isNotEyAndSp(timeStr))
             return "无效参数：未输入 | 为空 | 全为空格";
 
-        Date date = DateUtils.convert(timeStr);
+        Date date = DateUtil.convert(timeStr);
         String str = date.toString();
         log.info(str);
-        return DateUtils.dateToString(date, "yyyy-MM-dd hh:mm:ss");
+        return DateUtil.dateToString(date, "yyyy-MM-dd hh:mm:ss");
     }
 
     public void setVersion(String version) {
